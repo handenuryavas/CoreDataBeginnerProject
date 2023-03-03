@@ -14,6 +14,7 @@
 		084F7AEB29B1FEB8005812AC /* CoreDataBeginnerProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 084F7AE929B1FEB8005812AC /* CoreDataBeginnerProject.xcdatamodeld */; };
 		084F7AED29B1FEB8005812AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 084F7AEC29B1FEB8005812AC /* Assets.xcassets */; };
 		084F7AF029B1FEB8005812AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 084F7AEE29B1FEB8005812AC /* LaunchScreen.storyboard */; };
+		084F7AF829B214FE005812AC /* VC_AddEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F7AF729B214FE005812AC /* VC_AddEdit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		084F7AEC29B1FEB8005812AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		084F7AEF29B1FEB8005812AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		084F7AF129B1FEB8005812AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		084F7AF729B214FE005812AC /* VC_AddEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_AddEdit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				084F7AE229B1FEB8005812AC /* SceneDelegate.swift */,
 				084F7AE429B1FEB8005812AC /* ViewController.swift */,
 				084F7AE629B1FEB8005812AC /* Main.storyboard */,
+				084F7AF729B214FE005812AC /* VC_AddEdit.swift */,
 				084F7AEC29B1FEB8005812AC /* Assets.xcassets */,
 				084F7AEE29B1FEB8005812AC /* LaunchScreen.storyboard */,
 				084F7AF129B1FEB8005812AC /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				084F7AEB29B1FEB8005812AC /* CoreDataBeginnerProject.xcdatamodeld in Sources */,
+				084F7AF829B214FE005812AC /* VC_AddEdit.swift in Sources */,
 				084F7AE529B1FEB8005812AC /* ViewController.swift in Sources */,
 				084F7AE129B1FEB8005812AC /* AppDelegate.swift in Sources */,
 				084F7AE329B1FEB8005812AC /* SceneDelegate.swift in Sources */,
