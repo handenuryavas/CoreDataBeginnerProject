@@ -11,8 +11,8 @@ import CoreData
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
  
 
-    @IBOutlet weak var contactTableView: UITableView!
-    @IBOutlet weak var tvContactList: UIButton!
+    
+    @IBOutlet weak var tvContactList: UITableView!
     
     var contactList : [Contact]?
     
@@ -45,18 +45,43 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func bringPeople()
     {
         let fr : NSFetchRequest<Contact> = Contact.fetchRequest()
+        fr.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
         do
         {
             contactList = try (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext.fetch(fr)
             
-            contactTableView.reloadData()
+            tvContactList.reloadData()
         }
         
         catch{}
        
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        performSegue(withIdentifier: "sgEdit", sender: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "sgEdit"
+        {
+            let targetVc = segue.destination as! VC_AddEdit
+            targetVc.contact = contactList![sender as! Int]
+        }
+            
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext.delete(contactList![indexPath.row])
+            
+            bringPeople()
+        }
+    }
 
 }
 

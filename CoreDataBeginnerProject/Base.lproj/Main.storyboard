@@ -47,8 +47,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="contactTableView" destination="KOq-p9-L7Q" id="cMF-0k-aDg"/>
-                        <outlet property="tvContactList" destination="22V-hG-Xld" id="cCq-Ar-hH1"/>
+                        <outlet property="tvContactList" destination="KOq-p9-L7Q" id="u77-P2-kuq"/>
                         <segue destination="WqP-L1-jZd" kind="show" identifier="sgEdit" id="RQB-1q-TNr"/>
                     </connections>
                 </viewController>
